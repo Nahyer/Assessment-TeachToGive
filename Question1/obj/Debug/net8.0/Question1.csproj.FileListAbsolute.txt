@@ -12,3 +12,4 @@ C:\Users\reyha\C#learn\Assessment-TeachToGive\Question1\obj\Debug\net8.0\refint\
 C:\Users\reyha\C#learn\Assessment-TeachToGive\Question1\obj\Debug\net8.0\Question1.pdb
 C:\Users\reyha\C#learn\Assessment-TeachToGive\Question1\obj\Debug\net8.0\Question1.genruntimeconfig.cache
 C:\Users\reyha\C#learn\Assessment-TeachToGive\Question1\obj\Debug\net8.0\ref\Question1.dll
+C:\Users\reyha\C#learn\Assessment-TeachToGive\Question1\obj\Debug\net8.0\Question1.sourcelink.json

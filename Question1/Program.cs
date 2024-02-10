@@ -6,17 +6,17 @@
 for (int i = 1; i <= 100; i++)
 {
 
-    if (i % 3 == 0)
-    {
-        Console.WriteLine(i + " =Fizz");
-    }
-    if (i % 5 == 0)
-    {
-        Console.WriteLine(i + " =Buzz");
-    }
     if (i % 3 == 0 && i % 5 == 0)
     {
         Console.WriteLine(i + " =FizzBuzz");
+    }
+    else if (i % 3 == 0)
+    {
+        Console.WriteLine(i + " =Fizz");
+    }
+    else if (i % 5 == 0)
+    {
+        Console.WriteLine(i + " =Buzz");
     }
     else
     {
@@ -26,3 +26,19 @@ for (int i = 1; i <= 100; i++)
 
 // Question 2: Fibonacci Sequence
 // Write a program to generate the Fibonacci sequence up to 100.
+
+
+// Question 6: Count Vowels
+// Write a program that counts the number of vowels in a sentence.
+// eg " Hello World " => returns 2
+
+int count = 0;
+var word = "hello world";
+foreach (char v in word)
+{
+    if (v == 'a' || v == 'e' || v == 'i' || v == 'o' || v == 'u')
+    {
+        count++;
+    }
+}
+Console.Write(count);
