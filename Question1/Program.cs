@@ -28,6 +28,18 @@ for (int i = 1; i <= 100; i++)
 
 // Question 2: Fibonacci Sequence
 // Write a program to generate the Fibonacci sequence up to 100.
+static int fibbo(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return n;
+    }
+    return fibbo(n - 1) + fibbo(n - 2);
+}
+for (int i = 2; i < 12; i++)
+{
+    Console.WriteLine(fibbo(i));
+}
 
 // Question 3: Power of Two
 // Write a program that takes an integer as input and returns true if the input is a power of two.
