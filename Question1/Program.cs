@@ -1,9 +1,9 @@
-﻿// Question 1: FizzBuzz
+﻿using System;
+using System.Collections.Generic;
+// Question 1: FizzBuzz
 // Write a program that prints the numbers from 1 to 100. For multiples of 3, print "Fizz"; for 
 // multiples of 5, print "Buzz"; and for numbers that are multiples of both 3 and 5, print 
 // "FizzBuzz".
-using System;
-using System.Collections.Generic;
 
 for (int i = 1; i <= 100; i++)
 {
@@ -29,22 +29,58 @@ for (int i = 1; i <= 100; i++)
 // Question 2: Fibonacci Sequence
 // Write a program to generate the Fibonacci sequence up to 100.
 
-
-// Question 6: Count Vowels
-// Write a program that counts the number of vowels in a sentence.
-// eg " Hello World " => returns 2
-
-int count = 0;
-var word = "hello world";
-foreach (char v in word)
+// Question 3: Power of Two
+// Write a program that takes an integer as input and returns true if the input is a power of two.
+// Examples: 
+// 8=> returns true
+// 6=> returns false
+static bool power2(int n)
 {
-    if (v == 'a' || v == 'e' || v == 'i' || v == 'o' || v == 'u')
+    const int baseNum = 2;
+    while (n % baseNum == 0 && n > 1)
     {
-        count++;
+        n /= baseNum;
+    }
+    if (n == 1)
+    {
+        return true;
+    }
+    return false;
+}
+Console.Write(power2(6));
+
+// Question 4: Capitalize Words
+// Write a program that accepts a string as input, capitalizes the first letter of each word in the 
+// string, and then returns the result string.
+// Examples: 
+// "hi"=> returns "Hi"
+// "i love programming"=> returns "I Love Programming"
+static string Cap(string str)
+{
+    //string Caps="";
+    bool HasWords = str.Contains(" ");
+    if (HasWords)
+    {
+        string[] words = str.Split(' ');
+        for (int i = 0; i <= words.Length - 1; i++)
+        {
+            if (words[i].Length > 0)
+            {
+                words[i] = char.ToUpper(words[i][0]) + words[i].Substring(1);
+            }
+        }
+        return string.Join(" ", words);
+    }
+    else
+    {
+        //string CapS = str.Insert(0,"d");
+        str = char.ToUpper(str[0]) + str.Substring(1);
+        return str;
     }
 }
-Console.Write(count);
+Console.Write(Cap("hello world"));
 
+// Question 5: Reverse Integer
 // Write a program that takes an integer as input and returns an integer with reversed digit 
 // ordering.
 // Examples:
@@ -74,7 +110,7 @@ static int reverse(int number)
     }
 
 
-    string Rstring = new (Rarry);
+    string Rstring = new string(Rarry);
     if (isNegative)
     {
         Rstring = "-" + Rstring;
@@ -83,3 +119,18 @@ static int reverse(int number)
     return Rnumber;
 }
 reverse(100);
+
+// Question 6: Count Vowels
+// Write a program that counts the number of vowels in a sentence.
+// eg " Hello World " => returns 2
+
+int count = 0;
+var word = "hello world";
+foreach (char v in word)
+{
+    if (v == 'a' || v == 'e' || v == 'i' || v == 'o' || v == 'u')
+    {
+        count++;
+    }
+}
+Console.Write(count);
